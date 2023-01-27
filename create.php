@@ -1,3 +1,60 @@
+<?php 
+$connection = new mysqli("localhost", "root", "","university");
+
+$user_name="";
+$email="";
+$role="";
+$password="";
+$confirmer="";
+
+$error_message = "";
+$succes_message = "";
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $user_name = $_POST["user_name"];
+    $email = $_POST["email"];
+    $role = $_POST["role"];
+    $password = $_POST["password"];
+    $confirmer = $_POST["confirmer"];
+
+   do {
+        if( empty($user_name) || empty($email)  || empty($password) || empty($confirmer)){
+          $error_message = "Tout les champs sont obligatoire";
+          break;
+        }
+
+        if( $password !== $confirmer){
+          $error_message = "vos mot de passes ne sont pas les memes";
+          break;
+        }
+
+        //add new client in the database 
+        $sql = "INSERT INTO users(user_name, email,role,password) VALUES ('$user_name', '$email', '$role', '$password' )";
+        $result = $connection->query($sql);
+
+        if(!$result){
+            $error_message ="Invalid query: " .$connection->error;
+        }
+
+        $user_name="";
+        $email="";
+        $role="";
+        $password="";
+        $confirmer="";
+
+        $succes_message = "Utlilisateur ajoute avec succes";
+        header("location: login.php");
+
+
+   } while (false);
+
+}
+?> 
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,21 +128,44 @@
 
             <p>Creer un compte</p>
             <form action="" method="post">
+
+            
+                <?php   
+                      if (!empty($error_message)) {
+                          echo "
+                          <div>
+                              <strong>$error_message</strong>
+                          </div>
+                          ";
+                      }
+                      if (!empty($succes_message)) {
+                          echo "
+                          <div>
+                              <strong>$succes_message</strong>
+                          </div>
+                          ";
+                      }
+                ?>
+
+
                 <div class="userc" id="divc">
-                    <input type="text" placeholder="nom">
+                    <input type="text" placeholder="name" name="user_name" value="<?php echo $user_name; ?>">
                 </div>
                 <div class="userc">
-                    <input type="text" name="" id="" placeholder="nom d'utilisateur">
+                    <input type="email"  id="" placeholder="email" name="email" value="<?php echo $email; ?>">
                 </div> 
 
-                <div class="userc">
-                    <input type="text" placeholder="email">
+                <div class="userc" >
+                    <select name="role" id="" value="<?php echo $role; ?>" class="slect">
+                      <option value="">Admin</option>
+                      <option value="">user</option>
+                    </select>
                 </div>
                 <div class="userc">
-                    <input type="text" placeholder="mot de passe">
+                    <input type="password" placeholder="password" name="password" value="<?php echo $password; ?>">
                 </div>
                 <div class="userc">
-                    <input type="text" placeholder="confirmer votre mot de passe">
+                    <input type="password" placeholder="confirmer votre mot de passe" name="confirmer" value="<?php echo $confirmer; ?>">
                 </div>
                 <div class="connecterc">
                     <button type="submit">Enregistrer</button>

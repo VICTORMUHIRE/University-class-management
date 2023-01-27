@@ -108,7 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
                     <div>
                         <label for="">type de salle: <span>*</span></label>
-                        <select name="type_de_salle" value="<?php echo $type_de_salle; ?>">
+                        <select class="selectC" name="type_de_salle" value="<?php echo $type_de_salle; ?>">
                         <?php 
                         
                         //read the data from the table

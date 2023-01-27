@@ -12,11 +12,11 @@
         <div class="menu">
             <div class="logo"></div>
 
-            <div class="menus" id="first"><img src="./static/home.svg" alt=""></i> <a href="accueil.html">Accueil</a>  </div>
-            <div class="menus"><img src="./static/La Gestion Icône.svg" alt=""> <a href="gestion.html">Gestion</a> </i></div>
-            <div class="menus"><img src="./static/demande.svg" alt=""> <a href="demande.html">Demandes</a> </div>
-            <div class="menus"><img src="./static/attribuer.svg" alt=""></i> <a href="attribuer.html">attribuer</a></div>
-            <div class="menus"><img src="./static/about.svg" alt=""> <a href="about.html">about</a></div>
+            <div class="menus" id="first"><img src="./static/home.svg" alt=""></i> <a href="accueil.php">Accueil</a>  </div>
+            <div class="menus"><img src="./static/La Gestion Icône.svg" alt=""> <a href="gestion.php">Gestion</a> </i></div>
+            <div class="menus"><img src="./static/demande.svg" alt=""> <a href="demande.php">Demandes</a> </div>
+            <div class="menus"><img src="./static/attribuer.svg" alt=""></i> <a href="attribuer.php">attribuer</a></div>
+            <div class="menus"><img src="./static/about.svg" alt=""> <a href="about.php">about</a></div>
 
         </div>
         <div class="contenu-accueil" style="gap: 2%;">
@@ -54,7 +54,7 @@
                                 <td>30</td>
                                 <td>7 jours</td>
                                 <td class="btnActions">
-                                    <button>Attribuer</button>
+                                    <button><a href="attribuer.php">Attribuer</a> </button>
                                 </td>
                                    
                             </tr>
@@ -65,7 +65,7 @@
                                 <td>30</td>
                                 <td>7 jours</td>
                                 <td class="btnActions">
-                                    <button>Attribuer</button>
+                                    <button><a href="attribuer.php">Attribuer</a> </button>
                                 </td>
                             </tr>
                             <tr>
@@ -75,7 +75,7 @@
                                 <td>30</td>
                                 <td>7 jours</td>
                                 <td class="btnActions">
-                                    <button>Attribuer</button>
+                                    <button><a href="attribuer.php">Attribuer</a></button>
                                 </td>
                             </tr>
                             <tr>
@@ -85,7 +85,7 @@
                                 <td>30</td>
                                 <td>7 jours</td>
                                 <td class="btnActions">
-                                    <button>Attribuer</button>
+                                    <button><a href="attribuer.php">Attribuer</a> </button>
                                 </td>
                             </tr>
                         </tbody>

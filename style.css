@@ -133,13 +133,16 @@ body{
   border-radius: 8px;
   background: rgba(0,0,0,0.7);
   background-blend-mode: normal;
+  color: white;
+  font-size: 1rem;
+  font-family: "inter";
 }
 .question{
   position: absolute;left: 30%; top:35vh;
   width:18% ; height: 24px;
   padding: 12px;
   color: #fcf7e1;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   font-family: Arial;
   background-color: rgba(0,0,0,0.7);
@@ -152,7 +155,7 @@ body{
   width: 90%;
 }
 #div{
-  margin-top: 28px;
+  margin-top: 33px;
 }
 .login-blur div:first-child{
   display: flex;
@@ -160,18 +163,18 @@ body{
   align-items: center;
 }
 .user{
-  margin: 15px auto 0px auto;
+  margin:  15px auto 0px auto;
 }
 .user input{
   font-size: 1.1rem;
-  color: white;
+  background: rgba(255,255,255,0.25);
   font-family: "inter";
   border: none;
   width: 100%;
-  height: 45px;
+  height: 40px;
   border-radius: 5px;
   outline: none;
-  padding:8px 60px ;
+  padding:8px 15px ;
   box-sizing: border-box;
   background: rgba(255,255,255,0.25);
   background-blend-mode: normal;
@@ -182,7 +185,7 @@ body{
   height: 29px;
   color: #ffffff;
   font-family: "inter";
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 .connecter{
@@ -206,7 +209,7 @@ body{
   text-decoration: none;
   padding: 8px;
   color: #ffffff;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 400;
   font-family: Arial;
   background-color: rgba(75,135,154,0.8);
@@ -220,7 +223,7 @@ body{
 /* create.html */
 
 .create-blur{
-  position: absolute;left: 32.5%; top: 28vh;
+  position: absolute;left: 32.5%; top: 25vh;
   width: 35%;
   height:68%;
   border-radius: 10px;
@@ -248,21 +251,20 @@ body{
 
 }
 
-.userc input{
-  font-size: 1.1rem;
-  color: white;
+.userc input,select{
+  font-size: 1rem;
   font-family: consolas;
   border: none;
   width: 100%;
   height: 40px;
-  border-radius: 8px;
+  border-radius: 5px;
   margin-top: 15px ;
-  outline: none;
-  padding:8px 30px ;
+  padding:8px 15px ;
   box-sizing: border-box;
   background: rgba(255,255,255,0.25);
   background-blend-mode: normal;
 }
+
 
 .userc input::placeholder {
   width: 189px;
@@ -630,12 +632,12 @@ body{
   width: 70%;
   margin-left: 10px;
 }
-.formulaire select{
+.selectC{
   border: 1px solid #A7A7A7;
   border-radius: 3px;
   font-size: 1rem;
   font-family: Arial;
-  height: 32px;
+  height: 34px;
   width: 70%;
   margin-left: 10px;
 }
@@ -731,23 +733,24 @@ body{
   margin: 15px 61% 5px 0px;
 }
 .typeBf{
-  margin-left: 80%;
+  margin-left: 70%;
 
 }
-.typeBf button{
+.typeBf a{
   background-color: #4B879A;
   border-radius: 5px;
   border: none;
-  padding: 2px 15px;
+  padding: 10px 10px;
   font-size: 1.1rem;
-  height: 35px;
+  color: black;
+  text-decoration: none;
 }
 
 /* DEMANDE.HTML */
  .contenerD{
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 90%;
   align-items: center;
 }
 .contenerD table{
@@ -769,12 +772,13 @@ body{
 }
 
 .contenerD table th{
-  font-size: 1rem;
-  padding: .3em;
+  font-size: 1.1rem;
+  padding: 0px 2.9em;
   font-weight: 500;
+  margin-bottom: 10px;
 }
 .contenerD table td{
-  padding: 0.1em 0px;
+  padding: 0px 1.5em;
   justify-content: center;
   text-align: center;
 }
@@ -804,6 +808,10 @@ body{
   border-radius: 5px;
   height: 3rem;
   margin-left: 20px;
+  color: black;
+}
+.contenerD a{
+  color: black;
 }
 .thead {
  display: flex;

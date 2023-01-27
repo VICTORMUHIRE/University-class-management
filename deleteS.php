@@ -12,12 +12,7 @@ if(isset($_GET["id"])){
 
     $sql = "DELETE FROM gestion WHERE id = $id";
     $result = $connection->query($sql); 
-
-    $sqlt = "DELETE FROM types WHERE id = $id";
-    $result = $connection->query($sqlt); 
-
-
-
+    header("location: gestion.php"); 
 
 }
 

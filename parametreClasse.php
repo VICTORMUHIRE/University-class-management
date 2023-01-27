@@ -184,7 +184,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                                         <td>$row[nom_du_type]</td>
                                         <td>$nombre_salle</td>
                                         <td>
-                                            <span><a href='delete.php?id=$row[id]'><img src='./static/Poubelle Icône.png' alt=''></a></span>
+                                            <span><a href='deleteT.php?id=$row[id]'><img src='./static/Poubelle Icône.png' alt=''></a></span>
                                         </td>
                                     </tr>
                                     ";                                    
@@ -194,7 +194,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                     </div>
                     
                     <div class="typeBf">
-                        <button type="submit">Fermer</button>
+                        <br>
+                        <a href="gestion.php">Fermer</a>
                     </div>
                 </div>    
             </div>

@@ -1,3 +1,41 @@
+<?php
+ $servername = "localhost";
+ $username = "root";
+ $password ="" ;
+ $database = "university";
+
+ //create connection
+ $connection = new mysqli($servername, $username, $password,$database);
+
+ $user_name ="";
+ $password = "";
+
+if (!(empty($_POST["user_name"]) || empty($_POST["password"]) )){
+
+  $user_name = $_POST["user_name"];
+  $password = $_POST["password"];
+
+  $sql = "SELECT * FROM users";
+  $result = $connection->query($sql);
+  
+
+  while ($row = $result->fetch_assoc()){
+
+    if($row["user_name"] == $user_name and $row["password"] == $password){
+      header("location:accueil.php");
+    }
+    else{
+        header("location:login.php?error=nom ou mot de passe invalide");
+      exit();
+    }
+   }  
+}
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,18 +107,21 @@
         <p class="question">Avez-vous un compte?</p>
 
         <div class="login-blur">
-           <form action="" method="post">
+
+           <form action="" method="POST">
+
+            
             <div>
               <div class="user" id="div">
-                <input type="text" placeholder="username">
+                <input type="text" placeholder="username" name="user_name" value="<?php echo $user_name; ?>">
              </div>
               <div class="user">
-                <input type="password" name="" id="" placeholder="password">
+                <input type="password"  placeholder="password" name="password" value="<?php echo $password ; ?>">
               </div> 
             </div>
                 
                 <div class="connecter">
-                    <button type="submit">se connecter</button>
+                    <button type="submit" name="valider">se connecter</button>
                     <a href="create.php">creer un compte</a>
  
                 </div>

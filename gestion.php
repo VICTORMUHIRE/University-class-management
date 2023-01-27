@@ -90,7 +90,7 @@
                                         <td>
                                             <span><a href=''><img src='./static/Calendrier.png' alt=''></a></span>
                                             <span><a href='editClasse.php?id=$row[id]'><img src='./static/Editer Le Fichier Icône.png' alt=''></a></span>
-                                            <span><a href='delete.php?id=$row[id]'><img src='./static/Poubelle Icône.png' alt=''></a></span>
+                                            <span><a href='deleteS.php?id=$row[id]'><img src='./static/Poubelle Icône.png' alt=''></a></span>
                                         </td>
                                     </tr>
                                     ";                                    
